@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="top-nav">
+        <ul>
+            <li>National</li>
+            <li>UEFa</li>
+            <li>EPL</li>
+            <li>Premier League</li>
+            <li>Bundesliga</li>
+            <li>Serie A</li>
+        </ul>
+    </div>
+    <div class="ad-logo">
+        <div class="logo">
+            <h3>.The Himalayan Times</h3>
+        </div>
+        <div class="ads">
+            <p>!*Advertise your bussiness here*! <br> !*Contact us*!</p>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">National</a></li>
+                <li><a href="#">International</a></li>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">Category</a></li>
+            </ul>
+        </div>
+        <div class="srch"><input class="srch" type="search" placeholder="Lets find what you want">
+            <input type="submit" value="Search"></div>
+    </div>
+    <div class="main-content">
+        <div class="slider">
+            <h3 style="margin:10px;text-align: center;">The Best Online News of the Contry</h3>
+                <div class="myslides fade">
+                <div class="numbertext">1/4</div>
+                <img src="/img/1.jpg" width="90%" height="410px">
+               
+            </div>
+            <div class="myslides fade">
+                <div class="numbertext">2/4</div>
+                <img src="/img/2.jpg" width="90%" height="410px">
+                    </div>
+            <div class="myslides fade">
+                <div class="numbertext">3/4</div>
+                <img src="/img/3.jpg" width="90%" height="410px">
+                          </div>
+            <div class="myslides fade">
+                <div class="numbertext">4/4</div>
+                <img src="/img/4.jpg" width="90%" height="410px">
+            </div>
+            <!--next and previous button-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>    
+        
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <h5 class="pg">Get in touch with<br>Latest affair of the world.</h5>
+        </div>
+        <div class="contnt">
+            <h1>Top News</h1>
+            <ul>
+                <li>
+                    <h3>The city with gloom</h3>
+                </li>
+                <li>
+                    <h3>The city with gloom</h3>
+                </li>
+                <li>
+                    <h3>The city with gloom</h3>
+                </li>
+                <li>
+                    <h3>The city with gloom</h3>
+                </li>
+                <li>
+                    <h3>The city with gloom</h3>
+                </li>
+                <li>
+                    <h3>The city with gloom</h3>
+                </li>
+                <li>
+                    <h3>The city with gloom</h3>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var slideIndex = 1;
+           showSlides(slideIndex);
+
+        function plusSlides(n) 
+        {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n){
+            showSlides(slideIndex = n) 
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("myslides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            
+            slideIndex++;
+            if(slideIndex>slides.length){
+                slidesIndex=1
+            }
+            setTimeout(showSlides, 2000)
+
+
+        }
+    </script>
+</body>
+
+</html>
